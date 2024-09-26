@@ -7,6 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
     background-color: white;
     margin :0
 }
+a{
+    text-decoration:none;
+    color : black;
+    }
 .um
 {
     background: rgb(120, 49, 153);
@@ -26,12 +30,18 @@ ul
 }
 nav
 {
-    background-color: yellow;
+    background-color: #0a647a;
     padding: 0 20px;
     justify-content: space-between;
     align-items: center;
 }
-h1, p
+.roboto-condensed {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+.p3
 {
     color: black;
 }
@@ -49,11 +59,6 @@ li
 {
     padding: 0 20px;
 }
-h1
-{
-    margin: 0 20px;
-    padding: 10px;
-}
 button
 {
     background-color: transparent;
@@ -65,10 +70,6 @@ button
     top: 10px;
     display: none;
 }
-h1:hover{
-border-radius:30px;
-color : white;
-transition: 1s;
 }
 li:hover,{
     cursor:pointer;
@@ -82,6 +83,9 @@ width:120px;
 width:140px;
 transition:1s;
 }
+
+    align:}
+
 @media (max-width: 768px){
     nav, ul {
         flex-direction: column; /*alinha em coluna */
@@ -109,19 +113,19 @@ transition:1s;
     }
 }
     </style>
-     <nav>
+    <nav>
         <div class = "logo">
             <a href ="index.html"><img src = "racismo.png" title = "Inicio" class="imagem"></a>
         </div>
         <ul>
             <li>
-                <p><a href ="oqracismo.html">O que é Racismo?</a></p>
+                <p classs="p3"><a href ="oqracismo.html" class="roboto-condensed">O que é Racismo?</a></p>
             </li>
             <li>
-                <p><a href ="funciona.html">Como funciona o Futebol?</a></p>
+                <p><a href ="funciona.html" class="roboto-condensed">Como funciona o Futebol?</a></p>
             </li>
             <li>
-                <p><a href ="existe.html">Existe Racismo no futebol?</a></p>
+                <p><a href ="existe.html" class="roboto-condensed">Existe Racismo no futebol?</a></p>
             </li>
         </ul>
     </nav>
