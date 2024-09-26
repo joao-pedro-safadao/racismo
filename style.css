@@ -1,0 +1,36 @@
+.p3{
+    background-color:gray;
+    text-align: center;
+    margin: 10px 490px 10px 490px;
+    border-radius: 5px;
+}
+
+.titulo{
+    background-color: rgb(100, 100, 100);
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin: 5px 550px 5px 550px ;
+}
+.pai{
+    border-radius: 5px;
+    place-items: center;
+    display: grid;
+    margin: 0px 100px 0px 100px;
+}
+.titulo:hover,
+.pai:hover,
+.p3:hover{
+    transition: 1s;
+    background-color: rgb(168, 168, 168);
+}
+@media (max-width:768px){
+    .titulo{
+        display: grid;
+        place-items: center;
+        margin: 5px 190px;
+        border-radius: 5px;
+    }
+
+}
