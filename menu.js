@@ -28,6 +28,22 @@ ul
     justify-content: space-between;
     align-items: center;
 }
+.divracismo{
+font-size: 150px;
+text-align:center;
+color: steelblue;
+background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+color: black;
+  
+}
+#pracismo{
+color: black;
+text-align:justify;
+font-size: 25px;
+}
 nav
 {
     background-color: #0a647a;
