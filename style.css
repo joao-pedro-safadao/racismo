@@ -1,27 +1,40 @@
 .p3{
-    background-color:gray;
+    background-color:steelblue;
     text-align: center;
     margin: 10px 490px 10px 490px;
     border-radius: 5px;
 }
+.divracismo{
+    font-size: 150px;
+    text-align:center;
+    color: steelblue;
+    background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;}
 .pai{
+    background-color:rgb(255, 255, 255);
     border-radius: 5px;
     place-items: center;
     display: grid;
-    margin: 0px 100px 0px 100px;
+    margin: 5px 100px 5px 100px;
+    padding:0px 5px 0px 5px;
 }
-.titulo:hover,
 .pai:hover,
 .p3:hover{
     transition: 1s;
-    background-color: rgb(168, 168, 168);
+    background-color: steelblue;
 }
 @media (max-width:768px){
-    .titulo{
+    .pai{
         display: grid;
         place-items: center;
-        margin: 5px 190px;
+        margin: 5px 150px;
         border-radius: 5px;
+    }
+    .divracismo{
+        font-size: 50px;
     }
 
 }
