@@ -26,15 +26,16 @@
     transition: 1s;
     background-color: steelblue;
 }
-@media (max-width:768px){
-    .pai{
-        display: grid;
-        place-items: center;
-        margin: 5px 150px;
-        border-radius: 5px;
-    }
-    .divracismo{
-        font-size: 50px;
-    }
+ @media (max-width: 700px) {
+            .divracismo {
+                font-size: 80px; /* Ajusta o tamanho da fonte para telas menores */
+            }
+            #pracismo {
+                font-size: 18px;
+                margin: 5px 20px; /* Reduz as margens para telas menores */
+            }
+            .pai {
+                margin: 0 10px; /* Ajusta as margens para telas menores */
+            }
 
 }
