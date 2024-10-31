@@ -18,7 +18,7 @@
     border-radius: 5px;
     place-items: center;
     display: grid;
-    margin: 5px 100px 5px 100px;
+    margin:1px 5vh ;
     padding:0px 5px 0px 5px;
 }
 .pai:hover,

@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
             align-items: center;
         }
         .divracismo {
-            font-size: 150px;
+            font-size: 20vh;
             text-align: center;
             color: steelblue;
             background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
             text-align: justify;
             font-size: 25px;
             padding: 0px 5px;
-            margin: 5px 100px;
+            margin: 5px 5vh;
         }
         nav {
             background-color: #0a647a;
@@ -64,8 +64,8 @@ document.addEventListener('DOMContentLoaded', function() {
             color: black;
         }
         p:hover, a:hover {
-            color: rgb(218, 218, 0);
-            transition: 1s;
+            color:rgb(53, 54, 54) ;
+            transition: 0.5s;
         }
         li {
             padding: 0 20px;
