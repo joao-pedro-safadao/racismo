@@ -1,41 +1,83 @@
-.p3{
-    background-color:steelblue;
+*{
+    overflow-x: hidden;
+}
+body {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.um {
+    background: rgb(120, 49, 153);
+    color: black;
+}
+#dois {
+    background: rgb(0, 255, 255);
+    color: black;
+}
+ul {
+    list-style: none; 
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.title {
+    font-weight: bold;
+    font-size: 8vh;
     text-align: center;
-    margin: 10px 490px 10px 490px;
-    border-radius: 5px;
-}
-.divracismo{
-    font-size: 150px;
-    text-align:center;
-    color: steelblue;
     background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: black;}
-.pai{
-    background-color:rgb(255, 255, 255);
-    border-radius: 5px;
-    place-items: center;
-    display: grid;
-    margin:1px 5vh ;
-    padding:0px 5px 0px 5px;
+    margin: 0;
+    border-bottom: 0.5vh solid black;
+    box-shadow: 0 0 30px black;
+    padding: 2vh;
 }
-.pai:hover,
-.p3:hover{
-    transition: 1s;
-    background-color: steelblue;
+.containerpai{
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    margin: 5vh 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
- @media (max-width: 700px) {
-            .divracismo {
-                font-size: 80px; /* Ajusta o tamanho da fonte para telas menores */
-            }
-            #pracismo {
-                font-size: 18px;
-                margin: 5px 20px; /* Reduz as margens para telas menores */
-            }
-            .pai {
-                margin: 0 10px; /* Ajusta as margens para telas menores */
-            }
-
+#container {
+    color: black;
+    text-align: justify;
+    font-size: 2.5vh;
+    padding: 2vh;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    margin: 5vh 2vh;
+}
+.video-imagem{
+    width: 80%;
+    height: 1000px;
+    border: 0.5vh solid blue;
+    box-shadow: 0 0 20px blue;
+    border-radius: 20px;
+    margin: 3vh auto;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.imagemcentral{
+    margin: 10vh;
+    display: flex;
+}
+@media (max-width: 670px){
+    .imagemcentral{
+        width: 100%;
+    }
+    .video-imagem{
+        width: 80%;
+        height: 300px;
+        border: 0.5vh solid blue;
+        box-shadow: 0 0 20px blue;
+        border-radius: 20px;
+        margin: 3vh auto;
+        transition: 0.5s;
+    }
 }
