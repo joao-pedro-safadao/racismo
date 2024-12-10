@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
         <input type="checkbox" id="Button">
         <label for="Button" id="Button-label"></label> <!-- Botão para mobile -->
-        <ul class="OptionsMenu">
+        <ul id="ul1" class="OptionsMenu">
             <li class="OptionMenu">
                 <a href="oqracismo.html" class="LinkMenu"><p>O que é Racismo?</p></a>
             </li>
@@ -48,7 +48,7 @@ a{
     text-decoration: none;
 }
 
-ul {
+#ul1 {
     list-style: none; 
     padding: 0;
     display: flex;
@@ -68,7 +68,8 @@ ul {
     text-align: center;
     border-radius: 10px;
     transition: all 0.3s;
-    background: linear-gradient(to bottom, 	#228B22, #00FF00);
+    background: linear-gradient(to bottom, #228B22, #00FF00);
+    margin-right: 10px; 
 }
 .OptionMenu:hover{
     font-size: 2.6vh;
@@ -104,7 +105,7 @@ img:hover {
     margin: 0;
 }
 .SubOptionMenu {
-    background: linear-gradient(to bottom, 	#228B22, #00FF00);
+    background: linear-gradient(to bottom, #228B22, #00FF00);
     color: black;
     box-shadow: 0 0 4px black;
     width: 100%;
@@ -149,7 +150,7 @@ img:hover {
 }
     .OptionsMenu{
     display:none;}
-    ul {
+    #ul1 {
         display: none;
         flex-direction: column;
     }
