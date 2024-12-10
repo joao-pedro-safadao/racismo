@@ -182,9 +182,9 @@ img:hover {
     });
 
     function readAloud() {
-        const content = document.getElementById('container').innerText;
-        const speech = new SpeechSynthesisUtterance(content);
-        const voices = window.speechSynthesis.getVoices();
+        var content = document.getElementById('container').innerText;
+        var speech = new SpeechSynthesisUtterance(content);
+        var voices = window.speechSynthesis.getVoices();
         
         // Escolha a voz desejada
         const selectedVoice = voices.find(voice => voice.name === 'Google português do Brasil'); 
