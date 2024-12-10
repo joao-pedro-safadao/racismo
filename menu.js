@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </li>
         </ul>
     </nav>
+    <button class="read-aloud" onclick="readAloud()">Leia em Voz Alta</button>
     <style>
 #navizin{
     background-color: green;
@@ -169,7 +170,6 @@ img:hover {
 }
     </style>
 </body>
-
     `;
     document.body.insertAdjacentHTML('afterbegin', menu);
 
@@ -181,4 +181,25 @@ img:hover {
             subOptions.style.display = 'none';
         }
     });
+
+    function readAloud() {
+        const content = document.getElementById('container').innerText;
+        const speech = new SpeechSynthesisUtterance(content);
+        const voices = window.speechSynthesis.getVoices();
+        
+        // Escolha a voz desejada
+        const selectedVoice = voices.find(voice => voice.name === 'Google português do Brasil'); 
+        
+        if (selectedVoice) {
+            speech.voice = selectedVoice;
+        }
+
+        speech.lang = 'pt-BR'; // Define o idioma para português do Brasil
+        window.speechSynthesis.speak(speech);
+    }
+
+    // Aguarde as vozes serem carregadas
+    window.speechSynthesis.onvoiceschanged = function() {
+        window.speechSynthesis.getVoices();
+    };
 });
