@@ -2,7 +2,7 @@
     overflow-x: hidden;
 }
 body {
-    background-color: white;
+    background-color: rgb(197, 189, 189);
     padding: 0;
     margin: 0;
 }
@@ -29,14 +29,15 @@ ul {
     font-weight: bold;
     font-size: 8vh;
     text-align: center;
-    background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
+    background: linear-gradient(to bottom, 	#228B22, #00FF00);
     margin: 0;
-    border-bottom: 0.5vh solid black;
+   
     box-shadow: 0 0 30px black;
     padding: 2vh;
 }
 .containerpai{
-    box-shadow: 0 0 10px black;
+    background-color: white;
+    padding: 20px;
     border-radius: 10px;
     margin: 5vh 2vh;
     display: flex;
@@ -47,9 +48,8 @@ ul {
 #container {
     color: black;
     text-align: justify;
-    font-size: 2.5vh;
+    font-size: 3vh;
     padding: 2vh;
-    box-shadow: 0 0 10px black;
     border-radius: 10px;
     margin: 5vh 2vh;
 }

@@ -1,4 +1,3 @@
-// menu.js
 document.addEventListener('DOMContentLoaded', function () {
     const menu = `
 <body>
@@ -18,34 +17,62 @@ document.addEventListener('DOMContentLoaded', function () {
             <li class="OptionMenu">
                 <a href="existe.html" class="LinkMenu"><p>Existe Racismo no futebol?</p></a>
             </li>
+            <li class="OptionMenu" id="maisOpcoes">
+                <p>Jogadores</p>
+                <ul class="SubOptionsMenu" id="subOptions">
+                    <li class="SubOptionMenu">
+                        <a href="jog1.html" class="LinkMenu"><p>Vinícius Jr.</p></a>
+                    </li>
+                    <li class="SubOptionMenu">
+                        <a href="opcao2.html" class="LinkMenu"><p>Opção 2</p></a>
+                    </li>
+                    <li class="SubOptionMenu">
+                        <a href="opcao3.html" class="LinkMenu"><p>Opção 3</p></a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </nav>
     <style>
 #navizin{
-    background-color: blue;
+    background-color: green;
     margin: 0;
     display: flex;
 }
 p{
-margin: 0;
-padding: 2vh 0;}
+    margin: 0;
+    padding: 2vh 0;
+}
+a{
+    color:black;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none; 
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 .OptionsMenu{
     justify-content: space-evenly;
     width:100%;
     margin: 0;
+    display:flex;
+    cursor:pointer;
 }
 .OptionMenu{
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 4px black;
     width: 20vw;
     text-align: center;
     border-radius: 10px;
     transition: all 0.3s;
-    background: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
+    background: linear-gradient(to bottom, 	#228B22, #00FF00);
 }
 .OptionMenu:hover{
     font-size: 2.6vh;
     text-shadow: 0 0 2px black;
-    scale: 1.2;
     background: linear-gradient(to bottom, white, white, white);
     box-shadow: 0 0 100px white;
 }
@@ -69,6 +96,24 @@ img:hover {
 }
 #Button {
     display: none;
+}
+.SubOptionsMenu {
+    display: none;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+.SubOptionMenu {
+    background: linear-gradient(to bottom, 	#228B22, #00FF00);
+    color: black;
+    box-shadow: 0 0 4px black;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 1vh;
+}
+.SubOptionMenu:hover {
+    background: lightgray;
 }
 
     @media (max-width: 670px) {
@@ -102,6 +147,8 @@ img:hover {
     margin: 3vh;
     width: 80%;
 }
+    .OptionsMenu{
+    display:none;}
     ul {
         display: none;
         flex-direction: column;
@@ -124,4 +171,13 @@ img:hover {
 
     `;
     document.body.insertAdjacentHTML('afterbegin', menu);
+
+    document.getElementById('maisOpcoes').addEventListener('click', function() {
+        const subOptions = document.getElementById('subOptions');
+        if (subOptions.style.display === 'none' || subOptions.style.display === '') {
+            subOptions.style.display = 'flex';
+        } else {
+            subOptions.style.display = 'none';
+        }
+    });
 });
