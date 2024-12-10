@@ -182,21 +182,20 @@ img:hover {
     });
 
     function readAloud() {
-    var content = document.getElementById("content").innerText;
-    var speech = new SpeechSynthesisUtterance(content);
-    var voices = window.speechSynthesis.getVoices();
-    
-    // Escolha a voz desejada (modifique conforme a voz desejada)
-    var selectedVoice = voices.find(voice => voice.name === 'Google português do Brasil'); 
-    
-    if (selectedVoice) {
-        speech.voice = selectedVoice;
+        const content = document.getElementById('container').innerText;
+        const speech = new SpeechSynthesisUtterance(content);
+        const voices = window.speechSynthesis.getVoices();
+        
+        // Esperar até que as vozes estejam disponíveis
+        window.speechSynthesis.onvoiceschanged = function() {
+            const selectedVoice = voices.find(voice => voice.name === 'Google português do Brasil'); 
+            
+            if (selectedVoice) {
+                speech.voice = selectedVoice;
+            }
+
+            speech.lang = 'pt-BR'; // Define o idioma para português do Brasil
+            window.speechSynthesis.speak(speech);
+        };
     }
-
-    window.speechSynthesis.speak(speech);
-}
-
-// Aguarde as vozes serem carregadas
-window.speechSynthesis.onvoiceschanged = function() {
-    readAloud(); // Ou você pode carregar as vozes na inicialização
-}
+});
