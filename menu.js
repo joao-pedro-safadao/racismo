@@ -182,7 +182,7 @@ img:hover {
     });
 
     function readAloud() {
-        var content = document.getElementById('container').innerText;
+        var content = document.getElementById("content").innerText;
         var speech = new SpeechSynthesisUtterance(content);
         var voices = window.speechSynthesis.getVoices();
         
