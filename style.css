@@ -95,6 +95,6 @@ ul {
     transition: background-color 0.3s, transform 0.3s;
 }
 .read-aloud:hover {
-    background-color: #0056b3;
+    background-color: #228B22;
     transform: scale(1.1);
 }
