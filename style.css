@@ -83,7 +83,7 @@ ul {
 
 /* Estilo para o botão de leitura em voz alta */
 .read-aloud {
-    background-color: #00FF00;
+    background-color: #228B22;
     color: white;
     padding: 10px 20px;
     text-align: center;
@@ -95,6 +95,6 @@ ul {
     transition: background-color 0.3s, transform 0.3s;
 }
 .read-aloud:hover {
-    background-color: #228B22;
+    background-color: #00FF00;
     transform: scale(1.1);
 }
