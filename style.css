@@ -29,9 +29,8 @@ ul {
     font-weight: bold;
     font-size: 8vh;
     text-align: center;
-    background: linear-gradient(to bottom, 	#228B22, #00FF00);
+    background: linear-gradient(to bottom, #228B22, #00FF00);
     margin: 0;
-   
     box-shadow: 0 0 30px black;
     padding: 2vh;
 }
@@ -80,4 +79,22 @@ ul {
         margin: 3vh auto;
         transition: 0.5s;
     }
+}
+
+/* Estilo para o botão de leitura em voz alta */
+.read-aloud {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #000;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.read-aloud:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
 }
