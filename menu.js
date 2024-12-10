@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
             </li>
         </ul>
     </nav>
-    <button class="read-aloud" onclick="readAloud()">Leia em Voz Alta</button>
     <style>
 #navizin{
     background-color: green;
