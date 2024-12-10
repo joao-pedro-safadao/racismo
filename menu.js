@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <a href="jog1.html" class="LinkMenu"><p>Vinícius Jr.</p></a>
                     </li>
                     <li class="SubOptionMenu">
-                        <a href="opcao2.html" class="LinkMenu"><p>Opção 2</p></a>
+                        <a href="jog2.html" class="LinkMenu"><p>Daniel Alves</p></a>
                     </li>
                     <li class="SubOptionMenu">
                         <a href="opcao3.html" class="LinkMenu"><p>Opção 3</p></a>
