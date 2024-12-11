@@ -1,18 +1,32 @@
 document.addEventListener('DOMContentLoaded', function () {
+    let isReading = false;
+    let speechInstance = null;
+
     function readAloud() {
-        const content = document.getElementById('container').innerText;
-        const speech = new SpeechSynthesisUtterance(content);
+        if (isReading) {
+            window.speechSynthesis.cancel();
+            isReading = false;
+        } else {
+            const content = document.querySelector('.content').innerText;
+            speechInstance = new SpeechSynthesisUtterance(content);
 
-        speech.lang = 'pt-BR'; // Define o idioma para português do Brasil
+            speechInstance.lang = 'pt-BR'; // Define o idioma para português do Brasil
 
-        // Definir a voz preferida, se disponível
-        const voices = window.speechSynthesis.getVoices();
-        const preferredVoice = voices.find(voice => voice.name === 'Google português do Brasil');
-        if (preferredVoice) {
-            speech.voice = preferredVoice;
+            // Definir a voz preferida, se disponível
+            const voices = window.speechSynthesis.getVoices();
+            const preferredVoice = voices.find(voice => voice.name === 'Google português do Brasil');
+            if (preferredVoice) {
+                speechInstance.voice = preferredVoice;
+            }
+
+            window.speechSynthesis.speak(speechInstance);
+            isReading = true;
+
+            // Quando terminar de ler, redefinir a variável isReading
+            speechInstance.onend = () => {
+                isReading = false;
+            };
         }
-
-        window.speechSynthesis.speak(speech);
     }
 
     // Certifique-se de que as vozes estejam carregadas antes de tentar usá-las
