@@ -3,8 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let speechInstance = null;
 
     function readAloud() {
-        if (isReading) {
+        if (speechInstance !== null) {
             window.speechSynthesis.cancel();
+            speechInstance = null;
             isReading = false;
         } else {
             const content = document.querySelector('.content').innerText;
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Quando terminar de ler, redefinir a variável isReading
             speechInstance.onend = () => {
+                speechInstance = null;
                 isReading = false;
             };
         }
