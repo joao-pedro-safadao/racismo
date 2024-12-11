@@ -1,16 +1,26 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let isReading = false;
     let speechInstance = null;
+    let isPaused = false;
 
     function readAloud() {
-        if (speechInstance !== null) {
-            window.speechSynthesis.cancel();
-            speechInstance = null;
-            isReading = false;
+        // Verifica se o navegador suporta a API de síntese de fala
+        if (!window.speechSynthesis) {
+            alert("API de síntese de fala não é suportada pelo seu navegador.");
+            return;
+        }
+
+        // Se já estiver lendo e não estiver pausado, pause a leitura
+        if (speechInstance && !isPaused) {
+            window.speechSynthesis.pause();
+            isPaused = true;
+        } else if (speechInstance && isPaused) {
+            // Se já estiver lendo e estiver pausado, retome a leitura
+            window.speechSynthesis.resume();
+            isPaused = false;
         } else {
+            // Inicie a leitura se não estiver lendo
             const content = document.querySelector('.content').innerText;
             speechInstance = new SpeechSynthesisUtterance(content);
-
             speechInstance.lang = 'pt-BR'; // Define o idioma para português do Brasil
 
             // Definir a voz preferida, se disponível
@@ -20,13 +30,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 speechInstance.voice = preferredVoice;
             }
 
+            // Inicie a leitura
             window.speechSynthesis.speak(speechInstance);
-            isReading = true;
 
-            // Quando terminar de ler, redefinir a variável isReading
+            // Quando terminar de ler, redefinir a variável isPaused
             speechInstance.onend = () => {
                 speechInstance = null;
-                isReading = false;
+                isPaused = false;
             };
         }
     }
