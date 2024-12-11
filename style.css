@@ -18,7 +18,7 @@ a {
     background: rgb(0, 255, 255);
     color: black;
 }
-ul {
+.ul2 {
     list-style: none; 
     padding: 0;
     display: flex;
